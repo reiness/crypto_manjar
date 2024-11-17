@@ -39,13 +39,18 @@ def vigenere_cipher_decrypt(ciphertext, key):
     return ''.join(plaintext)
 
 def cryptography_game():
+    st.image('soal.jpg')
     st.title("🕵️‍♂️ Crypt Room Challege ")
-    st.write("""Karina terbangun di sebuah ruangan gelap.
-            Dinding-dindingnya dipenuhi dengan simbol-simbol aneh dan satu-satunya cahaya berasal dari sebuah lilin yang berkedip-kedip. 
-             Di seberang ruangan, sebuah pintu besi besar terpasang kokoh. Di atas pintu, terukir kode misterius: ykcx eggmk.""")
+    st.write("""Karina terbangun dalam kegelapan, di sebuah ruangan sempit yang berbau busuk 
+             dan juga dingin. Dinding-dinding kumuh di sekitarnya tampak ternodai, sementara 
+             di depannya, sebuah pesan aneh terlihat mencolok, tertulis dengan apa yang tampak 
+             seperti darah segar. Di ujung ruangan, sebuah pintu besi besar berdiri dengan megah 
+             namun mengintimidasi, dilengkapi layar berkedip-kedip yang menunggu untuk diisi 
+             dengan kode satu-satunya jalan keluar dari ruangan ini.
+""")
 
     st.markdown("### Room 1: 44 Chamber")
-    caesar_hint = st.checkbox("Minta bantuan makhluk halus")
+    caesar_hint = st.checkbox("Clue Room 1")
     if caesar_hint:
         st.write("Kaisar tahun depan")
 
@@ -63,11 +68,13 @@ def cryptography_game():
 
     if atbash_layer:
         st.markdown("### Room 2: Looking Glass")
-        st.write("""Karina melangkah ke ruangan kedua. Hanya ada sebuah cermin besar di tengah ruangan dengan bingkai penuh ukiran simbol aneh. 
-                 Saat dia melihat ke dalam cermin, bayangannya tiba-tiba tersenyum sendiri, meski dia tak bergerak. 
-                 Suara berbisik terdengar: 'Jangan berpaling, atau dia akan keluar'""")
+        st.write("""Karina melangkah ragu memasuki ruangan kedua. Di tengah ruangan, 
+                 hanya ada sebuah cermin besar yang memantulkan bayangan samar dirinya. Namun, 
+                 ketika dia menatap lebih dalam, bayangannya perlahan menyeringai lebar, meskipun 
+                 dia tidak bergerak sama sekali. Dari balik keheningan, terdengar bisikan mengerikan 
+                 menggema di sekelilingnya: "Jangan berpaling... atau dia akan keluar.""")
         
-        atbash_hint = st.checkbox("Minta bantuan pada cermin")
+        atbash_hint = st.checkbox("Clue Room 2")
         if atbash_hint:
             st.image('mrr.jpg')
 
@@ -78,14 +85,17 @@ def cryptography_game():
 
     if keyword_layer:
         st.markdown("### Room 3: Arthropod")
-        st.write("""Karina memasuki ruangan berikutnya dengan lantai yang bergerak sendirinya. 
-                 Makhluk seperti serangga besar berbentuk kunci mulai mengelilinginya. 
-                 Di sudut ruangan, terlihat pintu kayu kecil, satu-satunya jalan keluar.
-                 """)
+        st.write("""Karina melangkah memasuki ruangan berikutnya, hanya untuk merasakan 
+                 lantai di bawah kakinya bergerak perlahan, seolah hidup. Sensasi dingin 
+                 menjalar dari bawah, sesuatu yang tak terlihat merayap mengitari kakinya. 
+                 Seketika, dia menyadari ada makhluk-makhluk tak kasat mata yang melingkari 
+                 tubuhnya, semakin rapat dengan setiap putaran. Cakaran tajam terasa menggores 
+                 kulitnya, membuatnya menggigil ngeri saat rasa sakit itu perlahan menjalar, 
+                 seakan mereka menikmati penderitaannya.""")
         
-        keyword_hint = st.checkbox("Minta bantuan pada makhluk misterius")
+        keyword_hint = st.checkbox("Clue Room 3")
         if keyword_hint:
-            st.write("Dua huruf apa yang hewan?")
+            st.write("Hewan tersebut hanya memiliki dua huruf")
 
         keyword_guess = st.text_input("Your decryption for Room 3:", "")
         if keyword_guess.lower() == "yoaz trrmo":
@@ -94,14 +104,16 @@ def cryptography_game():
 
     if vigenere_layer:
         st.markdown("### Room 4: Vengèful")
-        st.write("""Karina berhasil mencapai pintu kayu dan masuk ke ruangan keempat. 
-                 Di sana, dindingnya dipenuhi angka yang berwarna merah darah. 
-                 Di tengah ruangan, sebuah meja kecil dengan secarik kertas bergambarkan kunci yang berulang.
-        """)
+        st.write("""Dengan napas tersengal dan kaki yang terluka, Karina berhasil keluar 
+                 dari ruangan sebelumnya, meninggalkan makhluk-makhluk yang nyaris melahapnya. 
+                 Dia memasuki ruangan keempat, hanya untuk dihadapkan pada pemandangan yang tak 
+                 kalah mengerikan dimana langit-langitnya dipenuhi angka-angka yang bercahaya 
+                 merah seperti darah segar, seakan baru ditulis oleh tangan tak kasat mata. 
+                 Angka-angka itu tampak hidup, bergerak perlahan-lahan, seolah mengawasi setiap gerakannya.""")
 
-        vigenere_hint = st.checkbox("Lihat darah pada dinding")
+        vigenere_hint = st.checkbox("Clue Room 4")
         if vigenere_hint:
-            st.write("1, 2, 3, 4, 5, ..., 7, 8, 9")
+            st.image('number.jpg')
 
         vigenere_guess = st.text_input("Your decryption for Room 4:", "")
         if vigenere_guess.lower() == "uban perak":
@@ -110,11 +122,14 @@ def cryptography_game():
 
     if anagram_layer:
         st.markdown("### Room 5: Missed Call")
-        st.write("""Karina melangkah ke ruangan selanjutnya. Di sana, sebuah telepon tua tergeletak di meja. 
-                 Meski tidak terhubung dengan apapun, telepon itu terus berdering, memutar suara yang sama berulang-ulang.""")
-        
+        st.write("""Karina melangkah ke ruangan selanjutnya dengan berhati-hati. Di tengah 
+                 ruangan yang remang-remang, sebuah telepon tua tergeletak di atas meja kayu tua. 
+                 Kabelnya menggantung hampir terputus, namun suara deringnya masih menggema, mengisi 
+                 keheningan dengan nada yang berulang-ulang. Setiap dentingnya terasa seperti panggilan 
+                 dari sesuatu yang tak kasat mata, memutar suara seram yang merayap ke tulang belakangnya, 
+                 seakan memanggilnya untuk mengangkat gagang telepon itu.""")
 
-        morse_hint = st.checkbox("Dengarkan suara pada telepon")
+        morse_hint = st.checkbox("Clue Room 5")
         if morse_hint:
             st.audio('room5.mp3')
 
@@ -122,8 +137,7 @@ def cryptography_game():
         if anagram_guess.lower() == "pekanbaru":
             st.balloons()
             st.success("🎉 Congratulations! You have solved the challenge!")
-        else:
-            st.error("Try again!")
+
 
 
 if __name__ == "__main__":

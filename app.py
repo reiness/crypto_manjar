@@ -39,7 +39,6 @@ def vigenere_cipher_decrypt(ciphertext, key):
     return ''.join(plaintext)
 
 def cryptography_game():
-    st.image('soal.jpg')
     st.title("🕵️‍♂️ Crypt Room Challege ")
     st.write("""Karina terbangun dalam kegelapan, di sebuah ruangan sempit yang berbau busuk 
              dan juga dingin. Dinding-dinding kumuh di sekitarnya tampak ternodai, sementara 
@@ -48,6 +47,7 @@ def cryptography_game():
              namun mengintimidasi, dilengkapi layar berkedip-kedip yang menunggu untuk diisi 
              dengan kode satu-satunya jalan keluar dari ruangan ini.
 """)
+    st.image('soal.jpg')
 
     st.markdown("### Room 1: 44 Chamber")
     caesar_hint = st.checkbox("Clue Room 1")

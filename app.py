@@ -61,7 +61,7 @@ def cryptography_game():
     else:
         atbash_layer = False
 
-    # Ensure variables are initialized before usage
+
     keyword_layer = False
     vigenere_layer = False
     anagram_layer = False
